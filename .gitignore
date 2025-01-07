@@ -1,0 +1,10 @@
+# Terraform state files
+terraform.tfstate
+terraform.tfstate.backup
+
+# Terraform cache files
+.terraform/
+
+# Sensitive variable files
+*.tfvars
+!*.tfvars.example
