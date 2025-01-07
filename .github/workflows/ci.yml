@@ -41,13 +41,19 @@ jobs:
           terraform_version: 1.5.0
 
       - name: Inicializar Terraform
-        run: terraform init
+        run: |
+          cd terraform
+          terraform init
 
       - name: Terraform plan
-        run: terraform plan
+        run: |
+          cd terraform
+          terraform plan
 
       - name: Terraform apply
-        run: terraform apply -auto-approve
+        run: |
+          cd terraform
+          terraform apply -auto-approve
 
   ecr-publish:
     name: Publicar imagen Docker en Amazon ECR
