@@ -1,10 +1,16 @@
-# Terraform state files
-terraform.tfstate
-terraform.tfstate.backup
-
-# Terraform cache files
+# Ignorar archivos y directorios dentro de la carpeta terraform
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+# Add to .gitignore
 .terraform/
 
-# Sensitive variable files
+# Archivos de estado de Terraform
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+
+# Archivos sensibles
 *.tfvars
 !*.tfvars.example
+
+# Lockfile de Terraform
+terraform/.terraform.lock.hcl
